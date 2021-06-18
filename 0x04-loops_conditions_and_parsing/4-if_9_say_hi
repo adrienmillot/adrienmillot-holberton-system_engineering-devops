@@ -9,5 +9,5 @@ do
     else
         echo "Holberton School"
     fi
-    counter=$(( $counter + 1 ))
+    (( counter++ ))
 done

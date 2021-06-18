@@ -20,5 +20,5 @@ do
             echo "$counter"
         ;;
     esac
-    counter=$(( $counter + 1 ))
+    (( counter++ ))
 done
