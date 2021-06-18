@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# This script is displaying 100 first number
+
+file="/etc/passwd"
+
+while IFS=: read -r username password userid groupid comment homedir cmdshell
+do    
+    echo "$username:$userid:$homedir"
+done < $file
