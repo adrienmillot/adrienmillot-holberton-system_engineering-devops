@@ -16,11 +16,6 @@ function kill_process()
 	sudo kill -SIGKILL $$
 }
 
-function remove_file()
-{
-	echo "remove file"
-}
-
 function ctrl_c()
 {
 	echo "Y U no love me?!"
