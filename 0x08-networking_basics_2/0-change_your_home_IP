@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# change your home ip
 
 HOST="localhost"
 LOOPBACK="127.0.0.2"
