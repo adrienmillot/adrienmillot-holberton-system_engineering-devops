@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# MySQL backup
+
+if [ "$#" -ne 1 ]; then
+    echo "Usage: 5-mysql_backup ROOT_PASSWORD"
+    exit 0
+fi
+
+BACKUP_NAME="backup.sql"
+DAY_NAME=$(date '+%Y-%m-%d')
+COMPRESS_NAME="${DAY_NAME}.tar.gz"
+
+mysqldump -u root -p"$1" --all-databases > "$BACKUP_NAME"
+
+tar -czvf "$COMPRESS_NAME" "$BACKUP_NAME"
